@@ -103,3 +103,92 @@ body{
     
   </div>
 </body>
+
+
+
+
+//HTML====
+<body>
+  <div class="calenderContainer">
+    <p class="month" id='month'>April</p>
+    <p class="day" id='day'>Monday</p>
+    <p class="date" id='date'>19</p>
+    <p class="year" id='year'>2021</p>
+     <input class="calendarPicker" type="date" />
+  </div>
+</body>
+
+ // js code?
+const calenderPicker=document.querySelector(".calenderContainer");
+const calendar = document.querySelector(".calendarPicker");
+const monthsName=document.querySelector(".month");
+const daysName=document.querySelector(".day");
+const dateNum=document.querySelector(".date");
+const yearsName=document.querySelector(".year");
+
+const date =new Date();
+const currentMonth= date.getMonth();
+
+monthsName.innerText=date.toLocaleString("en",{
+month:"long"
+}); 
+daysName.innerText=date.toLocaleString("en",{
+ weekday: "long"
+});
+dateNum.innerText=date.getDate();
+yearsName.innerText=date.getFullYear();
+
+calenderPicker.addEventListener("click",()=>{  
+ calendar.datePicker();
+})
+
+// css code
+ body{
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   align-items: center;
+   font-family: cursive;
+   background-color: orange;
+ }
+ 
+ .calenderContainer{
+   background-color: skyblue;
+   width: 300px;
+   text-align: center;
+   border-radius: 12px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+   overflow: hidden;
+ }
+ 
+ .month{
+   margin: 0;
+   background-color: lightgreen;
+   color: white;
+   padding: 10px;
+   font-size: 30px;
+   font-weight: bold;   
+ }
+ 
+ .day{
+   font-size:20px;
+   color:gray;
+    }
+    
+ .date{
+   font-size:80px;
+   margin:0;
+   font-weight: bold;
+ }
+ 
+ .year{
+   margin:20px 0;
+   font-size:20px;
+   color:gray;
+   font-weight:500;
+ }
+ 
+ .calendarPicker{
+   display:none;
+ }
