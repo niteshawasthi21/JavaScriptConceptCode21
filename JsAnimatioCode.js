@@ -55,3 +55,51 @@ span{
      /* filter: hue-rotate( 700deg ); */
   }
 }
+
+
+
+//js code
+
+const containerElmnt = document.querySelector(".container");
+const careers = ["Software Engineer", "Photographer", "FrontEnd Developer", "Instructor"];
+const colors = ["#FF69B4", "#33CC33", "#6666CC", "#CC3333"];
+
+let careerIndex = 0;
+let charIndex = 0;
+
+updateText();
+
+function updateText() {
+  charIndex++;
+
+  containerElmnt.innerHTML = `<h1 style="color: ${colors[careerIndex]}">I am ${careers[careerIndex].startsWith('I') ? "an" : "a"} ${careers[careerIndex].slice(0, charIndex)}</h1>`;
+
+  if (charIndex === careers[careerIndex].length) {
+    careerIndex = (careerIndex + 1) % careers.length;
+    charIndex = 0;
+  }
+
+  setTimeout(updateText, 400);
+}
+
+// css d=code
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body{
+   margin:0;
+   display:flex;
+   justify-content:center;
+   height:100vh;
+   align-items:center;
+   background:orange;
+   font-family: "Nerko One", cursive;
+   font-weight: 400;
+   font-style: normal
+ }
+
+//html
+<body>
+  <div class='container'>
+    
+  </div>
+</body>
