@@ -9,9 +9,9 @@ body{
   }
   
   .calenderContainer{
+    position: relative;
     background-color: skyblue;
     width: 15%;
-    height: 29%;
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
@@ -45,9 +45,9 @@ body{
     font-weight:500;
   }
   
-  /* .calendarPicker{
-    display:none;
-  } */
+  .calendarPicker{
+    opacity: 0;     
+  }
  
   .calendarPicker {
     padding: 10px;
@@ -76,3 +76,9 @@ body{
     max-width: 300px;
     margin: 20px auto;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+ 
