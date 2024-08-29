@@ -1,0 +1,43 @@
+body{
+    background-color: orange;
+    margin: 0;
+    padding: 0;
+}
+
+.imageContainer{
+    text-align: center;  
+}
+
+.imageContainer img{
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px gray;
+    background-color: lightblue;
+    width: 300px;
+    height: 300px;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+}
+
+.btn {
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn span {
+    font-weight: bold; /* Bold text */
+}
