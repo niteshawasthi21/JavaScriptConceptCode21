@@ -18,9 +18,16 @@ daysName.innerText = date.toLocaleString("en", {
 dateNum.innerText = date.getDate();
 yearsName.innerText = date.getFullYear();
 
+calenderPicker.addEventListener("click",()=>{
+    calendar.focus();
+})
+
+calendar.addEventListener("focus",(event)=>{
+    event.target?.showPicker(); 
+})
+
 calendar.addEventListener("input", (event) => {
   const selectedDate = new Date(event.target.value);
-
   monthsName.innerText = selectedDate.toLocaleString("en", { month: "long" });
   daysName.innerText = selectedDate.toLocaleString("en", { weekday: "long" });
   dateNum.innerText = selectedDate.getDate();
