@@ -9,12 +9,11 @@
 <body> 
        
     <div class="calenderContainer" >
-        <input class="calendarPicker" type="date"  />
-        <p class="month" id='month'  >April</p>
-        <p class="day" id='day'  >Monday</p>
-        <p class="date" id='date'  >19</p>
-        <p class="year" id='year' onclick="clicked()" >2021</p>
-        
+        <p class="month" id='month' aria-disabled="true" >April</p>
+        <p class="day" id='day' aria-disabled="true" >Monday</p>
+        <p class="date" id='date' aria-disabled="true">19</p>
+        <p class="year" id='year' onclick="clicked()" aria-disabled="true">2021</p>
+        <input class="calendarPicker" type="date"/>        
     </div>
     <script src="calender.js"></script>
 </body>
